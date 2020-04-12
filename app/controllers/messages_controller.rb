@@ -34,7 +34,7 @@ class MessagesController < ApplicationController
       flash[:success] = 'Message は正常に更新されました'
       redirect_to @message
     else
-      flash[:danger] = 'Message は更新されませんでした'
+      flash.now[:danger] = 'Message は更新されませんでした'
       render :edit
     end
   end
